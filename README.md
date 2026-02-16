@@ -4,36 +4,29 @@
 ​
 curiousSearch is a specialized OSINT tool designed to bridge the gap between complex Google Dorking and intuitive investigation. Its main goal is to simplify the usage of advanced search operators through a minimalist and efficient Dark Mode interface.<br/> <br/> 
 
-test:
--ef
--er
--er
--er
--er
--ey<br/> 
 ​Core Features :<br/> 
-    -Multi-Engine Support: Generate powerful queries for 5 different search engines simultaneously.<br/> 
-    ​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.<br/> 
-    ​-Deep File Filtering: Native support for common extensions (PDF, TXT, LOG, SQL, ENV) and custom filetype search.<br/> 
-    ​-Pre-configured Modes: Quick access to specialized searches:<br/> 
-    ​-Open Server & Directory Listing.<br/> 
-    ​-Configuration & Sensitive Files.<br/> 
-    ​-Advanced Google Images Dorking.<br/> 
-    ​-Temporal Precision: Search within a precise date, a specific interval, or an "all-time" range.<br/> 
-    ​-Targeted Scoping:<br/> 
-        ​-Social Media: Built-in filters for over 100 platforms.<br/> 
-        ​-Tech & Cloud: Specialized search for documentation and cloud storage.<br/> 
-        ​-Custom Domains: Filter by specific websites or exclude unwanted domains.<br/> 
-        ​-Expert Geolocation Filters: Include or exclude results by continents or specific country TLDs.<br/> 
-    ​-Profiles: Save, export, and share your custom research setups.<br/> 
-    ​-Multilingual: Full support for both French and English.<br/> 
-    ​-Privacy First: No data collection. Your investigations remain yours alone.<br/> <br/> 
+ensp-Multi-Engine Support: Generate powerful queries for 5 different search engines simultaneously.<br/> 
+ensp​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.<br/> 
+ensp​-Deep File Filtering: Native support for common extensions (PDF, TXT, LOG, SQL, ENV) and custom filetype search.<br/> 
+ensp​-Pre-configured Modes: Quick access to specialized searches:<br/> 
+ensp​-Open Server & Directory Listing.<br/> 
+ensp​-Configuration & Sensitive Files.<br/> 
+ensp​-Advanced Google Images Dorking.<br/> 
+ensp​-Temporal Precision: Search within a precise date, a specific interval, or an "all-time" range.<br/> 
+ensp​-Targeted Scoping:<br/> 
+enspensp​-Social Media: Built-in filters for over 100 platforms.<br/> 
+enspensp​-Tech & Cloud: Specialized search for documentation and cloud storage.<br/> 
+enspensp​-Custom Domains: Filter by specific websites or exclude unwanted domains.<br/> 
+enspensp​-Expert Geolocation Filters: Include or exclude results by continents or specific country TLDs.<br/> 
+ensp​-Profiles: Save, export, and share your custom research setups.<br/> 
+ensp​-Multilingual: Full support for both French and English.<br/> 
+ensp​-Privacy First: No data collection. Your investigations remain yours alone.<br/> <br/> 
 
 Use Cases :<br/> 
-    ​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.<br/> 
-    ​-Investigation: Digital forensics and OSINT research.<br/> 
-    ​-Journalism: Fact-checking and sourcing hidden information.<br/> 
-    ​-Personal Use: Advanced filtering for precise information gathering.<br/> <br/> 
+ensp​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.<br/> 
+ensp​-Investigation: Digital forensics and OSINT research.<br/> 
+ensp​-Journalism: Fact-checking and sourcing hidden information.<br/> 
+ensp​-Personal Use: Advanced filtering for precise information gathering.<br/> <br/> 
 
 ​License & Support :<br/> 
 ​This tool is free to use. Please do not redistribute it without proper attribution.<br/> 
