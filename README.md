@@ -3,8 +3,8 @@
 ​Advanced Dorking OSINT Framework > Created by Axel Chicheportiche.<br/> 
 ​
 curiousSearch is a specialized OSINT tool designed to bridge the gap between complex Google Dorking and intuitive investigation. Its main goal is to simplify the usage of advanced search operators through a minimalist and efficient Dark Mode interface.<br/> <br/> 
-
-​Core Features :<br/> 
+---
+​Core Features :<br/><br/> 
 &emsp;-Multi-Engine Support: Generate powerful queries for 5 different search engines simultaneously.<br/> 
 &emsp;​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.<br/> 
 &emsp;​-Deep File Filtering: Native support for common extensions (PDF, TXT, LOG, SQL, ENV) and custom filetype search.<br/> 
@@ -22,13 +22,13 @@ curiousSearch is a specialized OSINT tool designed to bridge the gap between com
 &emsp;​-Multilingual: Full support for both French and English.<br/> 
 &emsp;​-Privacy First: No data collection. Your investigations remain yours alone.<br/> <br/> 
 
-Use Cases :<br/> 
+Use Cases :<br/><br/>  
 &emsp;​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.<br/> 
 &emsp;​-Investigation: Digital forensics and OSINT research.<br/> 
 &emsp;​-Journalism: Fact-checking and sourcing hidden information.<br/> 
 &emsp;​-Personal Use: Advanced filtering for precise information gathering.<br/> <br/> 
 
-​License & Support :<br/> 
+​License & Support :<br/><br/>  
 ​This tool is free to use. Please do not redistribute it without proper attribution.<br/> 
 ​If you find this tool useful and want to support its development:<br/> <br/> 
 
