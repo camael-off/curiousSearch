@@ -1,0 +1,61 @@
+____________________________________________________
+fix google iages mode filters : 
+  -color
+  -Size
+  -Res
+  -Rights
+
+also change the preview text of each categories. instead of CTkOptionsMenu, it should be :
+  Type
+  Color
+  Size
+  Resolution
+  Right
+____________________________________________________
+fix linux issues : 
+  - not able to scroll in widgets
+____________________________________________________
+fix tkcalendar issue when trying to open it: 
+
+  Exception in Tkinter callback
+  Traceback (most recent call last):
+    File "/usr/lib/python3.12/tkinter/__init__.py", line 1967, in __call__
+      return self.func(*args)
+             ^^^^^^^^^^^^^^^^
+    File "/home//Documents/logiciels/curiousSearch-main/venv/lib/python3.12/site-packages/customtkinter/windows/widgets/ctk_button.py", line 554, in _clicked
+      self._command()
+    File "/home/I4353/Documents/logiciels/curiousSearch-main/venv/curiousSearch.py", line 277, in <lambda>
+      btn = ctk.CTkButton(f, text="📅", width=30, fg_color=COLORS["border_card"], hover_color=COLORS["accent"], command=lambda e=ent: self.open_calendar_popup(e))
+                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/home//Documents/logiciels/curiousSearch-main/venv/curiousSearch.py", line 419, in open_calendar_popup
+      t = ctk.CTkToplevel(self); t.grab_set(); t.attributes("-topmost", True)
+                                 ^^^^^^^^^^^^
+    File "/usr/lib/python3.12/tkinter/__init__.py", line 963, in grab_set
+      self.tk.call('grab', 'set', self._w)
+  _tkinter.TclError: grab failed: window not viewable
+____________________________________________________
+delete interval because it's useless and not working
+____________________________________________________
+add a reset button for the expert filters widget
+____________________________________________________
+fix onion targeting by using results given by the website rnsaffn.com/zg4
+____________________________________________________
+serach why the tool is so slow to load and work on linux hosts
+____________________________________________________
+add a custom field for site widget. so people can add a list of the websites of their choice. Put it underneath the actual categories.
+____________________________________________________
+fix the preset save window not working : 
+
+(venv) ➜  venv python3 curiousSearch.py
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/tkinter/__init__.py", line 1967, in __call__
+    return self.func(*args)
+           ^^^^^^^^^^^^^^^^
+  File "/home//Documents/logiciels/curiousSearch-main/venv/lib/python3.12/site-packages/customtkinter/windows/widgets/ctk_button.py", line 554, in _clicked
+    self._command()
+  File "/home/Documents/logiciels/curiousSearch-main/venv/curiousSearch.py", line 408, in save_profile_popup
+    p.grab_set()
+  File "/usr/lib/python3.12/tkinter/__init__.py", line 963, in grab_set
+    self.tk.call('grab', 'set', self._w)
+_tkinter.TclError: grab failed: window not viewable
