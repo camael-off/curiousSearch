@@ -4,6 +4,13 @@
 ​
 curiousSearch is a specialized OSINT tool designed to bridge the gap between complex Google Dorking and intuitive investigation. Its main goal is to simplify the usage of advanced search operators through a minimalist and efficient Dark Mode interface.<br/> <br/> 
 
+test:
+-ef
+-er
+-er
+-er
+-er
+-ey<br/> 
 ​Core Features :<br/> 
     -Multi-Engine Support: Generate powerful queries for 5 different search engines simultaneously.<br/> 
     ​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.<br/> 
