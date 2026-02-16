@@ -72,10 +72,7 @@
     "pastebin.com",
     "stackoverflow.com"
   ],
-  "Cloud/Docs": [
-    "docs.google.com",
-    "notion.so",
-    "s3.amazonaws.com",
-    "trello.com"
+  "Custom": [
+    "camael.fr"
   ]
 }
