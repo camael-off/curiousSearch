@@ -1,27 +1,36 @@
-curiousSearch is a specialized dorking OSINT tool created by Axel Chicheportiche.
-Is main goal is to simplify the usage of dorking with a minimalist user interface.
-In just few clicks, it is possible to generate powerfull dorks thru different search engines.
+**curiousSearch**
+​Advanced Dorking OSINT Framework > Created by Axel Chicheportiche
+​curiousSearch is a specialized OSINT tool designed to bridge the gap between complex Google Dorking and intuitive investigation. Its main goal is to simplify the usage of advanced search operators through a minimalist and efficient Dark Mode interface.
 
-non-exhaustive list of functions :
+​Core Features :
 
-  - Include and exclude keywords
-  - 5 search engines to use
-  - file type filtering (pdf, txt...) and custom extension search
-  - Multiple modes (Google Images search, Open server search, config files...)
-  - Date & range search : search for a precise intervale or date
-  - Website search : filter website, categories (social with over 100 websites, tech and cloud/docs). Custom website search and exclusion.
-  - Expert filters : precise dorking filters, geographical inclusion and exclusion search (search by continents, or custom country TLD).
-  - Profiles : save and share your customSearch research
-  - French and English available
+  ​-Multi-Engine Support: Generate powerful queries for 5 different search engines simultaneously.
+  ​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.
+  ​-Deep File Filtering: Native support for common extensions (PDF, TXT, LOG, SQL, ENV) and custom filetype search.
+  ​-Pre-configured Modes: Quick access to specialized searches:
+  ​-Open Server & Directory Listing.
+  ​-Configuration & Sensitive Files.
+  ​-Advanced Google Images Dorking.
+  ​-Temporal Precision: Search within a precise date, a specific interval, or an "all-time" range.
+  ​-Targeted Scoping:
+    ​-Social Media: Built-in filters for over 100 platforms.
+    ​-Tech & Cloud: Specialized search for documentation and cloud storage.
+    ​-Custom Domains: Filter by specific websites or exclude unwanted domains.
+    ​-Expert Geolocation Filters: Include or exclude results by continents or specific country TLDs.
+  ​-Profiles: Save, export, and share your custom research setups.
+  ​-Multilingual: Full support for both French and English.
+  ​-Privacy First: No data collection. Your investigations remain yours alone.
+  
+Use Cases :
 
+  ​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.
+  ​-Investigation: Digital forensics and OSINT research.
+  ​-Journalism: Fact-checking and sourcing hidden information.
+  ​-Personal Use: Advanced filtering for precise information gathering.
 
-Small list of usage :
+​License & Support :
+​This tool is free to use. Please do not redistribute it without proper attribution.
+​If you find this tool useful and want to support its development:
 
-  - Recon for bug bounty / penetration test
-  - OSINT investigations
-  - Journalists
-  - Personal searches
-
-This tool is free, do not redistribuate it. If you can afford it, support the project here : https://buymeacoffee.com/camael .
-
-Thanks to everyone who gave me feedback and ideas for this project, and thanks to you for using it !
+Support the project on [BuyMeACoffee](https://buymeacoffee.com/camael)
+​Special thanks to everyone who shared feedback and ideas to make this project possible!
