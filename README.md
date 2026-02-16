@@ -9,9 +9,9 @@ ___
 &emsp;​-Keyword Mastery: Easily include or exclude specific keywords to refine your results.<br/> 
 &emsp;​-Deep File Filtering: Native support for common extensions (PDF, TXT, LOG, SQL, ENV) and custom filetype search.<br/> 
 &emsp;​-Pre-configured Modes: Quick access to specialized searches:<br/> 
-&emsp;​-Open Server & Directory Listing.<br/> 
-&emsp;​-Configuration & Sensitive Files.<br/> 
-&emsp;​-Advanced Google Images Dorking.<br/> 
+&emsp;​&emsp;-Open Server & Directory Listing.<br/> 
+&emsp;​&emsp;-Configuration & Sensitive Files.<br/> 
+&emsp;​&emsp;-Advanced Google Images Dorking.<br/> 
 &emsp;​-Temporal Precision: Search within a precise date, a specific interval, or an "all-time" range.<br/> 
 &emsp;​-Targeted Scoping:<br/> 
 &emsp;&emsp;​-Social Media: Built-in filters for over 100 platforms.<br/> 
