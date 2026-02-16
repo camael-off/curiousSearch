@@ -6,11 +6,9 @@ import urllib.parse
 import json
 import os
 
-# --- CONFIGURATION DU DESIGN ---
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
-# Palette de couleurs "Pro"
 COLORS = {
     "bg_root": "#0f0f0f",
     "bg_card": "#1a1a1a",
@@ -25,7 +23,6 @@ COLORS = {
     "launch_btn": "#3ca4ff"
 }
 
-# Données des continents (Extensions principales)
 CONTINENT_TLDS = {
     "Europe": [".fr", ".de", ".uk", ".it", ".es", ".pl", ".nl", ".be", ".se", ".ch", ".at", ".pt", ".gr", ".dk", ".fi", ".no", ".ie", ".cz", ".ro", ".hu", ".ua", ".ru"],
     "North America": [".us", ".ca", ".mx"],
@@ -39,12 +36,10 @@ class CuriousSearch(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        # Configuration fenêtre
         self.title("CuriousSearch - OSINT Framework")
         self.geometry("1650x1050")
         self.configure(fg_color=COLORS["bg_root"])
 
-        # --- VARIABLES D'ÉTAT ---
         self.current_lang = "EN"
         self.img_mode_var = ctk.BooleanVar(value=False)
         self.open_server_var = ctk.BooleanVar(value=False)
@@ -53,7 +48,6 @@ class CuriousSearch(ctk.CTk):
         self.cloud_var = ctk.BooleanVar(value=False)
         self.config_var = ctk.BooleanVar(value=False)
         
-        # Filtre temps actif
         self.active_time_filter = "all" 
         
         self.geo_var = ctk.StringVar(value="All Countries")
@@ -62,7 +56,6 @@ class CuriousSearch(ctk.CTk):
         self.site_checks_static, self.file_checks, self.nav_checks = [], [], []
         self.continent_checks = [] 
         
-        # Sets pour stocker les sélections (Persistance)
         self.selected_sites_include = set()
         self.selected_sites_exclude = set()
         self.selected_continents_include = set() 
@@ -75,7 +68,6 @@ class CuriousSearch(ctk.CTk):
         self.sites_file = "sites.json"
         self.last_dork = ""
 
-        # Chargement des sites
         self.sites_data = self.load_sites_from_file()
         self.site_categories = ["All"] + list(self.sites_data.keys())
 
@@ -165,7 +157,6 @@ class CuriousSearch(ctk.CTk):
         grid.columnconfigure((0, 1, 2, 3), weight=1, uniform="col")
         grid.rowconfigure((0, 1), weight=1, uniform="row")
 
-        # 1. MOT CLÉ
         self.box_keywords = self.create_box(grid, 0, 0, "box1")
         self.add_column_headers(self.box_keywords)
         self.kw_scroll = ctk.CTkScrollableFrame(self.box_keywords, fg_color="transparent")
@@ -176,7 +167,6 @@ class CuriousSearch(ctk.CTk):
         ctk.CTkButton(self.kw_scroll, text="+", width=30, height=24, fg_color=COLORS["border_card"], hover_color=COLORS["accent"], command=self.add_keyword_field).pack(pady=5)
         self.kw_check_all = self.create_simple_footer(self.box_keywords, self.toggle_keywords, self.reset_keywords)
 
-        # 2. MOTEURS
         self.box_nav = self.create_box(grid, 0, 1, "box2")
         self.nav_scroll = ctk.CTkScrollableFrame(self.box_nav, fg_color="transparent")
         self.nav_scroll.pack(fill="both", expand=True, padx=5, pady=5)
@@ -187,7 +177,6 @@ class CuriousSearch(ctk.CTk):
             self.nav_checks.append(cb)
         self.check_all_nav = self.create_simple_footer(self.box_nav, self.toggle_navs, self.reset_navs)
 
-        # 3. FICHIERS
         self.box_files = self.create_box(grid, 0, 2, "box3")
         self.add_column_headers(self.box_files)
         self.file_scroll = ctk.CTkScrollableFrame(self.box_files, fg_color="transparent")
@@ -206,7 +195,6 @@ class CuriousSearch(ctk.CTk):
             self.file_checks.append(cb)
         self.file_check_all = self.create_simple_footer(self.box_files, self.toggle_files, self.reset_files)
 
-        # 4. METIER
         self.box_metier = self.create_box(grid, 0, 3, "box7")
         self.metier_scroll = ctk.CTkScrollableFrame(self.box_metier, fg_color="transparent")
         self.metier_scroll.pack(fill="both", expand=True, padx=5, pady=5)
@@ -258,12 +246,10 @@ class CuriousSearch(ctk.CTk):
             elif col == "#2980b9": self.switch_cloud = s; self.widgets_to_translate["cloud_mode"] = s
             else: self.switch_config = s; self.widgets_to_translate["config_mode"] = s
 
-        # 5. DATE & RANG
         self.box_date = self.create_box(grid, 1, 0, "box4")
         self.date_scroll = ctk.CTkScrollableFrame(self.box_date, fg_color="transparent")
         self.date_scroll.pack(fill="both", expand=True, padx=5, pady=5)
         
-        # Section 1: Checkboxes temps
         self.radio_time_frame = ctk.CTkFrame(self.date_scroll, fg_color="transparent")
         self.radio_time_frame.pack(fill="x", pady=(0, 15))
         
@@ -305,7 +291,6 @@ class CuriousSearch(ctk.CTk):
         self.ent_range = ctk.CTkEntry(self.date_scroll, placeholder_text="2000..2025", border_color=COLORS["border_card"], fg_color=COLORS["header_card"])
         self.ent_range.pack(fill="x", padx=10, pady=5)
         
-        # 6. SITE (AVEC CATÉGORIES)
         self.box_site = self.create_box(grid, 1, 1, "box5")
         
         self.cat_seg = ctk.CTkSegmentedButton(self.box_site, values=self.site_categories, command=self.update_site_list_display,
@@ -339,17 +324,14 @@ class CuriousSearch(ctk.CTk):
             
         self.check_all_sites = self.create_simple_footer(self.box_site, self.toggle_sites, self.reset_sites)
 
-        # 7. FILTRES EXPERTS (REORGANISÉ)
         self.box_opt = self.create_box(grid, 1, 2, "box6")
         self.opt_scroll = ctk.CTkScrollableFrame(self.box_opt, fg_color="transparent")
         self.opt_scroll.pack(fill="both", expand=True, padx=5, pady=5)
         
-        # 1. DORK OPS (EN PREMIER)
         self.lbl_std = ctk.CTkLabel(self.opt_scroll, text="", font=("Segoe UI", 12, "bold"), text_color=COLORS["text_dim"])
         self.lbl_std.pack(anchor="w", padx=5)
         self.widgets_to_translate["dork_ops"] = self.lbl_std
         
-        # Groupe Mutuellement Exclusif (Location) + Indépendants
         for name, key in [("Exact match (\" \")", "exact"), 
                           ("In body (intext:)", "intext"),
                           ("In title (intitle:)", "intitle"),
@@ -360,7 +342,6 @@ class CuriousSearch(ctk.CTk):
             
             cb = ctk.CTkCheckBox(self.opt_scroll, text=name, border_color=COLORS["border_card"], hover_color=COLORS["accent"], fg_color=COLORS["accent"])
             
-            # Application de la logique d'exclusivité pour le groupe de localisation
             if key in ["intext", "intitle", "inurl", "inanchor", "related"]:
                 cb.configure(command=lambda k=key: self.handle_exclusive_operator(k))
                 self.operator_checkboxes[key] = cb
@@ -370,7 +351,6 @@ class CuriousSearch(ctk.CTk):
             
         ctk.CTkFrame(self.opt_scroll, height=1, fg_color=COLORS["border_card"]).pack(fill="x", pady=10)
         
-        # 2. CONTINENTS
         self.lbl_cont = ctk.CTkLabel(self.opt_scroll, text="", font=("Segoe UI", 12, "bold"), text_color=COLORS["text_dim"])
         self.lbl_cont.pack(anchor="w", padx=5)
         self.widgets_to_translate["continents_label"] = self.lbl_cont
@@ -382,7 +362,6 @@ class CuriousSearch(ctk.CTk):
             
         ctk.CTkFrame(self.opt_scroll, height=1, fg_color=COLORS["border_card"]).pack(fill="x", pady=10)
         
-        # 3. COUNTRY ZONE
         self.lbl_custom_geo = ctk.CTkLabel(self.opt_scroll, text="", font=("Segoe UI", 12, "bold"), text_color=COLORS["text_dim"])
         self.lbl_custom_geo.pack(anchor="w", padx=5)
         self.widgets_to_translate["geo_custom_label"] = self.lbl_custom_geo
@@ -391,7 +370,6 @@ class CuriousSearch(ctk.CTk):
         self.add_geo_field()
         ctk.CTkButton(self.opt_scroll, text="+", width=30, height=24, fg_color=COLORS["border_card"], hover_color=COLORS["accent"], command=self.add_geo_field).pack(pady=5)
 
-        # 8. ACTIONS
         self.box_action = self.create_box(grid, 1, 3, "box8")
         self.btn_frame = ctk.CTkFrame(self.box_action, fg_color="transparent")
         self.btn_frame.pack(fill="both", expand=True, padx=25, pady=(30, 0))
@@ -412,20 +390,17 @@ class CuriousSearch(ctk.CTk):
         self.lbl_author = ctk.CTkLabel(self.footer_action, text="by Camael", font=("Segoe UI", 12), text_color=COLORS["text_dim"])
         self.lbl_author.pack(side="right", padx=5)
 
-        # BINDINGS
         self.bind("<Return>", lambda e: self.run_investigation())
         self.bind("<Control-c>", lambda e: self.copy_to_clipboard())
         self.bind("<Control-C>", lambda e: self.copy_to_clipboard())
 
         self.change_language("EN"); self.toggle_img_filters(); self.refresh_profile_list(); self.sync_date_logic()
 
-    # --- LOGIQUE EXCLUSIVITÉ OPERATORS ---
     def handle_exclusive_operator(self, active_key):
         if getattr(self, f"{active_key}_m").get() == 1:
             for key, widget in self.operator_checkboxes.items():
                 if key != active_key: widget.deselect()
 
-    # --- POPUPS & EXTERNAL LINKS ---
     def save_profile_popup(self):
         p = ctk.CTkToplevel(self)
         p.title("Save")
@@ -458,7 +433,6 @@ class CuriousSearch(ctk.CTk):
         elif tool == "pimeyes": target = "https://pimeyes.com/"
         webbrowser.open(target)
 
-    # --- MÉTHODE DE CHARGEMENT DES SITES ---
     def load_sites_from_file(self):
         default_sites = {
             "Social": ["linkedin.com", "facebook.com", "twitter.com", "instagram.com", "reddit.com", "tiktok.com"],
@@ -479,7 +453,6 @@ class CuriousSearch(ctk.CTk):
             except:
                 return default_sites
 
-    # --- HELPERS DESIGN ---
     def create_box(self, p, r, c, k):
         f = ctk.CTkFrame(p, fg_color=COLORS["bg_card"], corner_radius=10, border_width=1, border_color=COLORS["border_card"])
         f.grid(row=r, column=c, sticky="nsew", padx=10, pady=10)
@@ -594,7 +567,6 @@ class CuriousSearch(ctk.CTk):
             if mode == "in": self.selected_continents_include.discard(cont)
             else: self.selected_continents_exclude.discard(cont)
 
-    # --- LOGIQUE MÉTIER ---
     def remove_dynamic_row(self, d, l): d[3].destroy(); l.remove(d)
     def add_keyword_field(self): self.add_dynamic_row(self.frame_custom_kw if hasattr(self, 'frame_custom_kw') else self.kw_scroll, self.kw_list, "kw_placeholder")
     def add_site_field(self): self.add_dynamic_row(self.frame_custom_sites, self.site_list_custom, "site_placeholder")
@@ -846,20 +818,15 @@ class CuriousSearch(ctk.CTk):
             if len(si_in) == 1: final.append(f"site:{si_in[0]}")
             else: final.append(f"({' OR '.join(['site:'+s for s in si_in])})")
         
-# 1. Custom Geo : On récupère les inclusions manuelles
         geo_in = [e.get().strip() for e, bi, bo, _ in self.geo_list_custom if e.get().strip() and bi.is_checked]
         
-        # 2. On récupère la liste des exclusions manuelles pour le filtrage (ex: [".fr"])
         custom_excludes_list = [e.get().strip() for e, bi, bo, _ in self.geo_list_custom if e.get().strip() and bo.is_checked]
         
-        # 3. On construit la partie dork négative (-site:.fr)
         geo_out = [f'-site:{e}' for e in custom_excludes_list]
         
-        # 4. Continents (Avec filtrage intelligent)
         for cont_name in self.selected_continents_include:
             tlds = CONTINENT_TLDS.get(cont_name, [])
             if tlds:
-                # CRUCIAL : On retire les TLDs exclus manuellement de la liste du continent
                 filtered_tlds = [t for t in tlds if t not in custom_excludes_list]
                 
                 if filtered_tlds:
@@ -925,4 +892,5 @@ class CuriousSearch(ctk.CTk):
         self.refresh_profile_list()
 
 if __name__ == "__main__":
+
     CuriousSearch().mainloop()
