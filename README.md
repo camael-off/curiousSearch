@@ -1,6 +1,6 @@
 **curiousSearch**
 
-​Advanced Dorking OSINT Framework > Created by Axel Chicheportiche
+​Advanced Dorking OSINT Framework > Created by Axel Chicheportiche.
 ​
 curiousSearch is a specialized OSINT tool designed to bridge the gap between complex Google Dorking and intuitive investigation. Its main goal is to simplify the usage of advanced search operators through a minimalist and efficient Dark Mode interface.
 
