@@ -22,13 +22,13 @@ ___
 &emsp;​-Multilingual: Full support for both French and English.<br/> 
 &emsp;​-Privacy First: No data collection. Your investigations remain yours alone.<br/> <br/> 
 
-Use Cases :<br/><br/>  
+Use Cases :<br/>
 &emsp;​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.<br/> 
 &emsp;​-Investigation: Digital forensics and OSINT research.<br/> 
 &emsp;​-Journalism: Fact-checking and sourcing hidden information.<br/> 
 &emsp;​-Personal Use: Advanced filtering for precise information gathering.<br/> <br/> 
 
-​License & Support :<br/><br/>  
+​License & Support :<br/> 
 ​This tool is free to use. Please do not redistribute it without proper attribution.<br/> 
 ​If you find this tool useful and want to support its development:<br/> <br/> 
 
