@@ -34,4 +34,3 @@ ___
 ___
 Support the project on [BuyMeACoffee](https://buymeacoffee.com/camael)<br/> 
 ​Special thanks to everyone who shared feedback and ideas to make this project possible!<br/> 
-___
