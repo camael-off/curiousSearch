@@ -21,16 +21,17 @@ ___
 &emsp;​-Profiles: Save, export, and share your custom research setups.<br/> 
 &emsp;​-Multilingual: Full support for both French and English.<br/> 
 &emsp;​-Privacy First: No data collection. Your investigations remain yours alone.<br/> <br/> 
-
+___
 Use Cases :<br/>
 &emsp;​-Cybersecurity: Reconnaissance for Bug Bounty and Penetration Testing.<br/> 
 &emsp;​-Investigation: Digital forensics and OSINT research.<br/> 
 &emsp;​-Journalism: Fact-checking and sourcing hidden information.<br/> 
 &emsp;​-Personal Use: Advanced filtering for precise information gathering.<br/> <br/> 
-
+___
 ​License & Support :<br/> 
 ​This tool is free to use. Please do not redistribute it without proper attribution.<br/> 
 ​If you find this tool useful and want to support its development:<br/> <br/> 
-
+___
 Support the project on [BuyMeACoffee](https://buymeacoffee.com/camael)<br/> 
 ​Special thanks to everyone who shared feedback and ideas to make this project possible!<br/> 
+___
