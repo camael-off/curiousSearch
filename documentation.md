@@ -142,6 +142,12 @@ This option is some sort of preset to search for password and logins in  logs, s
 
 ___
 
+### Onion Targeting :
+
+This option is usefull when you want to find onion links related to certain keywords.
+
+![logs](./images/9_1.png)
+___
 ### S3 Buckets & Clouds
 
 This option is searching for data in these cloud provider websites : 
