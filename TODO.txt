@@ -1,6 +1,14 @@
 
-fix onion targeting by using results given by the website rnsaffn.com/zg4
+remove onion search or fix onion targeting by using results given by the website rnsaffn.com/zg4
 ____________________________________________________
 serach why the tool is so slow to load and work on linux hosts
 ____________________________________________________
 add countries TLD
+____________________________________________________
+
+google images mode is not showing categories name again when activated ( file size, type etc etc)
+____________________________________________________
+change the position of the custom fields for websites :
+its under the site list, should be before it
+____________________________________________________
+add check all for the countries and continents because its missing
