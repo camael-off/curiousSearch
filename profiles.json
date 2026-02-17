@@ -1,0 +1,57 @@
+{
+    "Default": {
+        "keywords": [
+            [
+                "",
+                false,
+                false
+            ]
+        ],
+        "sites_custom": [
+            [
+                "",
+                false,
+                false
+            ]
+        ],
+        "sites_include": [],
+        "sites_exclude": [],
+        "continents_include": [],
+        "continents_exclude": [],
+        "file_checks": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "geo": "All Countries",
+        "time_filter": "all",
+        "switches": {
+            "img": false,
+            "server": false,
+            "logs": false,
+            "onion": false,
+            "cloud": false,
+            "config": false,
+            "exact": 1,
+            "intext": 0,
+            "intitle": 0,
+            "inurl": 0,
+            "inanchor": 0,
+            "related": 0,
+            "archive": 0
+        }
+    }
+}
