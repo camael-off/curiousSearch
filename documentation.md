@@ -127,7 +127,9 @@ The next options are basicly research presets.
 curiousSearch can search for open servers available without authentication.
 
 ![open server](./images/7.png)
+
 for example, here we found an open index without security.
+
 ![files](./images/8.png)
 
 ___
