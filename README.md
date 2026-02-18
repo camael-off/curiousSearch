@@ -31,8 +31,8 @@ python3 curiousSearch.py
 &emsp;​- Pre-configured Modes: Quick access to specialized searches:<br/>
 &emsp;​&emsp;• Open Server & Directory Listing.<br/> 
 &emsp;​&emsp;• Configuration & Sensitive Files.<br/> 
-&emsp;​&emsp;• Onion link finder<br/><br/>
-&emsp;​&emsp;• S3 bucket and clouds.<br/><br/>
+&emsp;​&emsp;• Onion link finder<br/>
+&emsp;​&emsp;• S3 bucket and clouds.<br/>
 &emsp;​&emsp;• Configuration files.<br/><br/>
 &emsp;​- Temporal Precision: Search within a precise date, a specific interval, or an "all-time" range.<br/><br/> 
 &emsp;​- Targeted Scoping:<br/>
