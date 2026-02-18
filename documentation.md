@@ -178,5 +178,11 @@ ___
 Launch the investigation or copy the dork to your clipboard.
 
 **Shortcuts:** `Enter` to launch, `Ctrl + C` to copy.
+___
 
+## PRESETS 
+
+You can save you dork query with the save button. Every presets are located in the profiles.json file. 
+
+___
 Support the project on [Buy Me a Coffee](https://buymeacoffee.com/camael).
