@@ -8,11 +8,19 @@
 
 ### Installation ###
 
-Download the [latest release](https://github.com/camael-off/curiousSearch/). 
 You need [python 3.10+](https://www.python.org/downloads/).
-Make sure have all needed libraries : 
+
+Then follow these simple steps: 
 ```
+mkdir curiousSearch
+cd curiousSearch
+python3 -m venv venv
+source venv/bin/activate
+cd venv
+git clone https://github.com/camael-off/curiousSearch.git
+cd curiousSearch
 pip install -r requirements.txt
+python3 curiousSearch.py
 ```
 ### Usage/Help ###
 
