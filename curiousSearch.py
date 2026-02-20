@@ -1,4 +1,4 @@
-# Author : Axel Chicheportiche
+# Author : Camael
 
 import customtkinter as ctk
 from tkcalendar import Calendar
