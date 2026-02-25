@@ -331,12 +331,10 @@ class CuriousSearch(ctk.CTk):
         self.frame_static_sites.pack(fill="x")
         self.update_site_list_display("All")
 
-        # 7. LANGUES & ZONES GEO (La fusion logicielle)
         self.box_lang = self.create_box(grid, 1, 2, "box9")
         self.lang_geo_scroll = ctk.CTkScrollableFrame(self.box_lang, fg_color="transparent")
         self.lang_geo_scroll.pack(fill="both", expand=True, padx=5, pady=5)
 
-        # -- Sous-section Langues --
         lang_header = ctk.CTkFrame(self.lang_geo_scroll, fg_color="transparent")
         lang_header.pack(fill="x", pady=(0, 5))
         
@@ -350,7 +348,8 @@ class CuriousSearch(ctk.CTk):
 
         ctk.CTkFrame(self.lang_geo_scroll, height=1, fg_color=COLORS["border_card"]).pack(fill="x", pady=10)
 
-        # -- Sous-section Continents --
+
+        # Sous-section Continents
         self.lbl_cont = ctk.CTkLabel(self.lang_geo_scroll, text="", font=("Segoe UI", 12, "bold"), text_color=COLORS["text_dim"])
         self.lbl_cont.pack(anchor="w", padx=5)
         self.widgets_to_translate["continents_label"] = self.lbl_cont
@@ -363,7 +362,7 @@ class CuriousSearch(ctk.CTk):
             
         ctk.CTkFrame(self.lang_geo_scroll, height=1, fg_color=COLORS["border_card"]).pack(fill="x", pady=10)
         
-        # -- Sous-section Pays/Custom Geo --
+        # Sous-section Pays/Custom Geo
         geo_header = ctk.CTkFrame(self.lang_geo_scroll, fg_color="transparent")
         geo_header.pack(fill="x", pady=(0, 5))
         self.lbl_custom_geo = ctk.CTkLabel(geo_header, text="", font=("Segoe UI", 12, "bold"), text_color=COLORS["text_dim"])
@@ -375,7 +374,7 @@ class CuriousSearch(ctk.CTk):
         self.frame_custom_geo.pack(fill="x")
         self.add_geo_field()
 
-        # Footer commun Langues & Zones
+        # Footer Langues & Zones
         footer_lang_geo = ctk.CTkFrame(self.box_lang, fg_color="transparent", height=45)
         footer_lang_geo.pack(fill="x", side="bottom")
         lang_geo_btn_container = ctk.CTkFrame(footer_lang_geo, fg_color="transparent")
@@ -392,7 +391,7 @@ class CuriousSearch(ctk.CTk):
                       text_color=COLORS["text_main"], font=("Segoe UI", 10, "bold"), 
                       command=self.reset_lang_geo).pack(side="left", padx=5, pady=10)
 
-        # 8. EXPERT FILTERS (Purifiés : juste les opérateurs Google)
+        # 8. EXPERT FILTERS
         self.box_opt = self.create_box(grid, 1, 3, "box6")
         self.opt_scroll = ctk.CTkScrollableFrame(self.box_opt, fg_color="transparent")
         self.opt_scroll.pack(fill="both", expand=True, padx=5, pady=5)
